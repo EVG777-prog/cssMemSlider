@@ -40,6 +40,10 @@ body {
     transform: scale(1.2);
 }
 
+.nav-point:hover .circle {
+    background-color: blueviolet;
+}
+
 .navigation {
     margin-top: 1em;
     margin-left: auto;
