@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+}
+
+.slider {
+    height: 100vh;
+    max-width: 50vw;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-point {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    margin: 5px;
+    transition: all 0.5s ease;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.circle {
+    border: 3px solid white;
+    width: 1em;
+    height: 1em;
+    /* background-color: #FFFFFF; */
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.nav-point:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.navigation {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    /* right: 0; */
+}
+
+.labels {
+    width: 10em;
+    height: 5em;
+    display: flex;
+}
+
+input[name="slider"] {
+    display: none;
+}
+
+.mems {
+    height: 80vh;
+    width: 400%;
+    transition: all 0.6s ease;
+    /* border: 10px solid gray; */
+    display: flex;
+}
+
+.mem {
+    height: 80vh;
+    width: 100%;
+    transition: all 0.6s ease;
+    display: flex;
+    /* border: 10px solid gray; */
+}
+
+.mem img {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+#sl1:checked~.mems {
+    /* margin-left: calc((100% - 400px) / 2); */
+    margin-left: 0%;
+}
+
+#sl2:checked~.mems {
+    margin-left: -100%;
+}
+
+#sl3:checked~.mems {
+    margin-left: -200%;
+}
+
+#sl4:checked~.mems {
+    margin-left: -300%;
+}
+
+#sl1:checked~.navigation .labels .num1 {
+    background-color: aliceblue;
+}
+
+#sl2:checked~.navigation .labels .num2 {
+    background-color: aliceblue;
+}
+
+#sl3:checked~.navigation .labels .num3 {
+    background-color: aliceblue;
+}
+
+#sl4:checked~.navigation .labels .num4 {
+    background-color: aliceblue;
+}
+
+#sl1:checked~.navigation .text-slider .text-cont {
+    margin-left: 0;
+}
+
+#sl2:checked~.navigation .text-slider .text-cont {
+    margin-left: -100%;
+}
+
+#sl3:checked~.navigation .text-slider .text-cont {
+    margin-left: -200%;
+}
+
+#sl4:checked~.navigation .text-slider .text-cont {
+    margin-left: -300%;
+}
+
+.text-slider {
+    overflow: hidden;
+    position: relative;
+    width: fit-content;
+}
+
+.text-cont {
+    display: flex;
+    width: 400%;
+    /* height: 100%; */
+    /* border: 10px solid red; */
+    transition: all 0.5s ease;
+}
+
+.text {
+    font-size: 3em;
+    width: 100%;
+    overflow: hidden;
+}
